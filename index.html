@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CALCULATOR APP - Ultimate</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="calculator">
+    <div class="display-box">
+      <div id="history"></div>
+      <div id="display">0</div>
+    </div>
+    <div class="keys">
+      <button>1</button><button>2</button><button>3</button><button class="operator">−</button>
+      <button>4</button><button>5</button><button>6</button><button class="operator">×</button>
+      <button>7</button><button>8</button><button>9</button><button class="operator">÷</button>
+      <button>0</button><button>,</button><button class="equal">=</button><button class="operator">+</button>
+      <button class="clear">C</button><button class="backspace">⌫</button>
+      <button class="history-btn" onclick="toggleHist()">📜 <b>RIWAYAT</b></button>
+    </div>
+  </div>
+
+  <div class="history-panel" id="histPanel" style="display:none">
+    <h3>RIWAYAT PERHITUNGAN</h3>
+    <div id="histList"><div class="hist-item">Belum ada riwayat</div></div>
+    <button class="clear" style="width:100%; margin-top:12px; padding:10px;" onclick="clearHist()"><b>Hapus Riwayat</b></button>
+  </div>
+</div>
+
+<div class="payment-notice" id="paymentNotice" role="dialog" aria-modal="true" aria-labelledby="paymentNoticeTitle" aria-describedby="paymentNoticeDescription" hidden>
+  <div class="payment-notice__box">
+    <h2 id="paymentNoticeTitle">Pembayaran</h2>
+    <p id="paymentNoticeDescription">Selesaikan pembayaran sebesar jumlah berikut untuk membuka hasil perhitungan.</p>
+    <p class="payment-notice__price">Rp 500.000,00</p>
+    <div class="payment-notice__methods">
+      <section class="payment-notice__method" aria-labelledby="danaTitle">
+        <h3 id="danaTitle">Transfer DANA</h3>
+        <p>Nomor tujuan DANA:</p>
+        <p class="payment-notice__account">0822 9940 1629</p>
+        <p class="payment-notice__account-name">Pastikan nomor tujuan benar sebelum mengirim.</p>
+      </section>
+      <section class="payment-notice__method" aria-labelledby="qrisTitle">
+        <h3 id="qrisTitle">Bayar dengan QRIS</h3>
+        <img class="payment-notice__qris" src="Image/qris%20az%20store.jpg" alt="Kode QRIS AZ Store">
+        <p>Pindai kode QRIS menggunakan aplikasi pembayaran Anda.</p>
+      </section>
+    </div>
+    <p class="payment-notice__disclaimer">Simpan bukti pembayaran. Pembayaran perlu dikonfirmasi secara manual dan hasil tidak terbuka otomatis.</p>
+    <button class="payment-notice__close" id="closePaymentNotice" type="button">Mengerti</button>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
