@@ -1,4 +1,10 @@
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+  -webkit-tap-highlight-color:transparent;
+}
 body { 
   background: radial-gradient(circle at top, #1a1a3a, #0a0a0f 60%);
   min-height:100vh; display:flex; justify-content:center; align-items:center; padding:20px;
